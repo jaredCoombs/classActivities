@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Rock Paper Scissors</title>
-  </head>
-  <body>
-    <script></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+
+  <h1><strong>Rock, Paper, Scissors</strong></h1>
+
+  <p> Click the button to play </p>
+
+  <button onClick="myFunction()">Try it</button>
+
+  <p id="demo"></p>
+  <script>
+    // asks user " do you want to play?" 
+    //user clicks "ok" : asks user to type "rock, paper or scissors"
+    // computer chooses rock paper or scissors at random.
+    //computer reports win or loss to user. 
+    //asks user to play again. click "ok" or cancel: ends game
+    //user cancels: game ends
+
+    function myFunction() {
+      var txt;
+      var r = confirm("Press ok to begin!");
+      if (r == true) {
+        txt = prompt("Choose rock, paper, or scissors", "");
+      } else {
+        txt = "Alrighty then, take care, bye bye now.";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    }
+
+  </script>
+</body>
+
 </html>
