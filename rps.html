@@ -24,8 +24,15 @@
     //computer reports win or loss to user. 
     //asks user to play again. click "ok" or cancel: ends game
     //user cancels: game ends
-    let choices = ['rock', 'paper', 'scissors']
 
+    let userChoice
+    let computerChoice
+    var result = results()
+    const displayResult = document.getElementById('results')
+    const computerChoice = document.getElementById('computer-choice')
+    const randomNumber = Math.round(Math.random() * 3)
+    const userChoice = document.getElementById('user-choice')
+    const possibleChoices = document.querySelectorAll(.choice)
     function myFunction() {
       var txt;
       var r = confirm("Press ok to begin!");
@@ -36,26 +43,32 @@
       }
       document.getElementById("demo").innerHTML = txt;
     }
-    function myfuncion() {
-      demo.innerHTML =
-        arr[Math.floor(Math.random) * arr.length];
-      console.log([])
+
+    // function to get a random result
+    function generateComputerChoice() {
+      if (randomNumber === 1) {
+        return computerChoice = 'rock'
+      } else if (randomNumber === 2) {
+        return computerChoice = 'paper'
+      } else if (randomNumber === 3) {
+        return computerChosen = 'scissors'
+      }
     }
 
     function results() {
       if (computerChoice === userChoice) {
         return result = 'We had a tie.'
-      } else if (computerChosen === 'rock' && userChosen === 'paper') {
+      } else if (computerChoice === 'rock' && userChoice === 'paper') {
         return result = 'you win!'
-      } else if (computerChosen === 'rock' && userChosen === 'scissors') {
+      } else if (computerChoice === 'rock' && userChoice === 'scissors') {
         return result = 'you lose!'
-      } else if (computerChosen === 'paper' && userChosen === 'siccors') {
+      } else if (computerChoice === 'paper' && userChoice === 'scissors') {
         return result = 'you win!'
-      } else if (computerChosen === 'paper' && userChosen === 'rock') {
+      } else if (computerChoice === 'paper' && userChoice === 'rock') {
         return result = 'you lose!'
-      } else if (computerChosen === 'siccors' && userChosen === 'paper') {
+      } else if (computerChoice === 'scissors' && userChoice === 'paper') {
         return result = 'you lose!'
-      } else if (computerChosen === 'siccors' && userChosen === 'rock') {
+      } else if (computerChoice === 'scissors' && userChoice === 'rock') {
         return result = 'you win!'
       }
 
