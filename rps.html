@@ -42,6 +42,25 @@
       console.log([])
     }
 
+    function results() {
+      if (computerChoice === userChoice) {
+        return result = 'We had a tie.'
+      } else if (computerChosen === 'rock' && userChosen === 'paper') {
+        return result = 'you win!'
+      } else if (computerChosen === 'rock' && userChosen === 'scissors') {
+        return result = 'you lose!'
+      } else if (computerChosen === 'paper' && userChosen === 'siccors') {
+        return result = 'you win!'
+      } else if (computerChosen === 'paper' && userChosen === 'rock') {
+        return result = 'you lose!'
+      } else if (computerChosen === 'siccors' && userChosen === 'paper') {
+        return result = 'you lose!'
+      } else if (computerChosen === 'siccors' && userChosen === 'rock') {
+        return result = 'you win!'
+      }
+
+
+    }
 
   </script>
 </body>
